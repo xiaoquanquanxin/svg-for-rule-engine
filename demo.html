@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        svg {
+            background: pink;
+        }
+        
+        path {
+            fill: red;
+            stroke-width: 1
+        }
+    </style>
+</head>
+<body>
+<svg width='400' height='400'>
+    <path d='M 10, 300 50, 300 M 50, 300 C 200 ,300  200 ,100 350 ,100 M350 ,100 390 ,100' stroke='black'
+          stroke-width='20'
+          fill="transparent"/>
+</svg>
+<svg width='400' height='400'>
+    <path d='M 0,10 100,10 M100,10 C 200,0 200,100 300,100 M 300,100 ,400 100'
+          stroke='black' stroke-width='20' fill='transparent'/>
+</svg>
+<svg width='400' height='400'>
+    <defs>
+        <marker id="arrow" markerUnits="strokeWidth" markerWidth="12" markerHeight="12" viewBox="0 0 12 12" refX="6"
+                refY="6" orient="auto">
+            <path d="M2,2 L10,6 L2,10 L2,2" style="fill: #0f0;"/>
+        </marker>
+    </defs>
+    <path d='M 0,10 100,10 M100,10 C 200,0 200,100 300,100 M 300,100 ,400 100'
+          stroke='black' stroke-width='20' fill='transparent'
+          marker-end="url(#arrow)"/>
+</svg>
+</body>
+</html>
